@@ -50,3 +50,27 @@ TypefaceManager.getInstance()
 ```
 
 You're going to want to put this somewhere before any views are inflated.  I find that the application file is a good place for this.
+
+#### In Use
+
+Now we're ready to start using our custom TypefaceViews.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto" <!-- Don't forget this!!! -->
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.carrotcreative.typefaceviews.TypefaceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:typeface="bold"
+        />
+
+</LinearLayout>
+```
+
+Your TextView should now be displaying in bold.
