@@ -38,6 +38,8 @@ There are four functions you can call on the TypefaceManager.
 
 `asDefault`: Sets the last registered typeface as the default.  While this is not required, this is strongly recommended as you will crash out the first time you forget to set the typeface if you do not include this.
 
+Here is some example usage following our previous example:
+
 ```java
 TypefaceManager.getInstance()
     .setTypefaceViewStyleable(R.styleable.TypefaceView)
