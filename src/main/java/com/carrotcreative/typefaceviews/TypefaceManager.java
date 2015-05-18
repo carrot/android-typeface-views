@@ -23,6 +23,10 @@ public class TypefaceManager {
 
     private final SparseArray<String> mTypefaces = new SparseArray<>();
     private final SparseArray<Typeface> mCompiledTypefaces = new SparseArray<>();
+    private int[] mTypefaceViewStyleable;
+    private int mTypefaceAttribute;
+    private int mDefaultTypefaceAttribute = -1;
+    private int mLastTypefaceAttributeSet = -1;
 
     private TypefaceManager() { /** Do Nothing */ }
 
@@ -36,7 +40,40 @@ public class TypefaceManager {
      */
     public TypefaceManager registerTypeface(int key, String fileName)
     {
+        mLastTypefaceAttributeSet = key;
         mTypefaces.put(key, fileName);
+        return this;
+    }
+
+    /**
+     * Sets the TypefaceView styleable
+     */
+    public TypefaceManager setTypefaceViewStyleable(int[] textViewStyleable)
+    {
+        mTypefaceViewStyleable = textViewStyleable;
+        return this;
+    }
+
+    /**
+     * Sets the TypefaceView typeface attribute
+     */
+    public TypefaceManager setTypefaceAttribute(int attribute)
+    {
+        mTypefaceAttribute = attribute;
+        return this;
+    }
+
+    /**
+     * Sets the last value registered with {@link #registerTypeface}
+     * as the default value
+     */
+    public TypefaceManager asDefault()
+    {
+        if(mLastTypefaceAttributeSet == -1)
+        {
+            throw new IllegalStateException("Cannot call asDefault, as there was no typeface set yet");
+        }
+        mDefaultTypefaceAttribute = mLastTypefaceAttributeSet;
         return this;
     }
 
@@ -50,6 +87,25 @@ public class TypefaceManager {
         }
 
         return typeface;
+    }
+
+    int[] getTypefaceViewStyleable()
+    {
+        return mTypefaceViewStyleable;
+    }
+
+    int getTypefaceAttribute()
+    {
+        return mTypefaceAttribute;
+    }
+
+    int getDefaultAttribute()
+    {
+        if(mDefaultTypefaceAttribute == -1)
+        {
+            throw new IllegalStateException("There is no default typeface attribute set");
+        }
+        return mDefaultTypefaceAttribute;
     }
 
     private Typeface createTypeface(Context context, int typefaceValue) throws IllegalArgumentException

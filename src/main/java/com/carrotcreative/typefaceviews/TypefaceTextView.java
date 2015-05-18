@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public abstract class TypefaceTextView extends TextView {
+public class TypefaceTextView extends TextView {
 
     public TypefaceTextView(Context context)
     {
@@ -33,8 +33,20 @@ public abstract class TypefaceTextView extends TextView {
         final int typefaceValue;
         if (attrs != null)
         {
-            TypedArray values = context.obtainStyledAttributes(attrs, getTextViewStyleable());
-            typefaceValue = values.getInt(getTypefaceAttribute(), 1);
+            int[] styleable = TypefaceManager.getInstance().getTypefaceViewStyleable();
+            int attributes = TypefaceManager.getInstance().getTypefaceAttribute();
+
+            TypedArray values = context.obtainStyledAttributes(attrs, styleable);
+            int tempTypefaceValue = values.getInt(attributes, -1);
+            if(tempTypefaceValue != -1)
+            {
+                typefaceValue = tempTypefaceValue;
+            }
+            else
+            {
+                typefaceValue = TypefaceManager.getInstance().getDefaultAttribute();
+            }
+
             values.recycle();
         }
         else
@@ -44,10 +56,6 @@ public abstract class TypefaceTextView extends TextView {
 
         setTypeface(TypefaceManager.getInstance().obtainTypeface(context, typefaceValue));
     }
-
-    protected abstract int[] getTextViewStyleable();
-
-    protected abstract int getTypefaceAttribute();
 
     protected void preInit(Context context, AttributeSet attrs)
     {
