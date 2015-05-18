@@ -58,7 +58,7 @@ Now we're ready to start using our custom TypefaceViews.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res-auto" <!-- Don't forget this!!! -->
+    xmlns:custom="http://schemas.android.com/apk/res-auto" <!-- Do not forget this!!! -->
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
