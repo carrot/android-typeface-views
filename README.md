@@ -77,6 +77,33 @@ Make sure you don't forget to add `xmlns:custom="http://schemas.android.com/apk/
 
 Your TextView should now be displaying in bold.
 
+## Including in Project
+
+To include this module in your project, go to the releases and download the lastest release .aar file.
+
+Take that aar file, and place it in your projects `libs` folder.
+
+Add in to your projects `build.gradle` file's dependencies:
+
+```gradle
+dependencies {
+    //...
+    compile(name:'typeface-views-v1.X.X', ext:'aar') // Replace X with actual version number
+}
+```
+
+Also add the libs folder as a repository if you haven't already:
+
+```gradle
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+```
+
+You should now be good to go!
+
 ## License
 
 Android Typeface Views is licensed under [MIT](LICENSE.md)
