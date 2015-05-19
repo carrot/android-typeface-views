@@ -76,3 +76,7 @@ Now we're ready to start using our custom TypefaceViews.
 Make sure you don't forget to add `xmlns:custom="http://schemas.android.com/apk/res-auto"` at the top, as we're not using custom attributes.
 
 Your TextView should now be displaying in bold.
+
+## License
+
+Android Typeface Views is licensed under [MIT](LICENSE.md)
