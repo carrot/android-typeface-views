@@ -2,24 +2,24 @@ package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.widget.Button;
 
-public class TypefaceTextView extends TextView {
+public class TypefaceButton extends Button {
 
-    public TypefaceTextView(Context context)
+    public TypefaceButton(Context context)
     {
         super(context);
     }
 
-    public TypefaceTextView(Context context, AttributeSet attrs)
+    public TypefaceButton(Context context, AttributeSet attrs)
     {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public TypefaceTextView(Context context, AttributeSet attrs, int defStyle)
+    public TypefaceButton(Context context, AttributeSet attrs, int defStyleAttr)
     {
-        super(context, attrs, defStyle);
+        super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
 

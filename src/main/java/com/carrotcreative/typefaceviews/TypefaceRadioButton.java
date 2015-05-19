@@ -2,24 +2,24 @@ package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.widget.RadioButton;
 
-public class TypefaceTextView extends TextView {
+public class TypefaceRadioButton extends RadioButton {
 
-    public TypefaceTextView(Context context)
+    public TypefaceRadioButton(Context context)
     {
         super(context);
     }
 
-    public TypefaceTextView(Context context, AttributeSet attrs)
+    public TypefaceRadioButton(Context context, AttributeSet attrs)
     {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public TypefaceTextView(Context context, AttributeSet attrs, int defStyle)
+    public TypefaceRadioButton(Context context, AttributeSet attrs, int defStyleAttr)
     {
-        super(context, attrs, defStyle);
+        super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
 

@@ -2,24 +2,24 @@ package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.widget.CheckBox;
 
-public class TypefaceTextView extends TextView {
+public class TypefaceCheckbox extends CheckBox {
 
-    public TypefaceTextView(Context context)
+    public TypefaceCheckbox(Context context)
     {
         super(context);
     }
 
-    public TypefaceTextView(Context context, AttributeSet attrs)
+    public TypefaceCheckbox(Context context, AttributeSet attrs)
     {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public TypefaceTextView(Context context, AttributeSet attrs, int defStyle)
+    public TypefaceCheckbox(Context context, AttributeSet attrs, int defStyleAttr)
     {
-        super(context, attrs, defStyle);
+        super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
 

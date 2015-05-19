@@ -2,24 +2,24 @@ package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.widget.Switch;
 
-public class TypefaceTextView extends TextView {
+public class TypefaceSwitch extends Switch {
 
-    public TypefaceTextView(Context context)
+    public TypefaceSwitch(Context context)
     {
         super(context);
     }
 
-    public TypefaceTextView(Context context, AttributeSet attrs)
+    public TypefaceSwitch(Context context, AttributeSet attrs)
     {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public TypefaceTextView(Context context, AttributeSet attrs, int defStyle)
+    public TypefaceSwitch(Context context, AttributeSet attrs, int defStyleAttr)
     {
-        super(context, attrs, defStyle);
+        super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
 
