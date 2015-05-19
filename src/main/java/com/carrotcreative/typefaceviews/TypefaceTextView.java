@@ -26,8 +26,6 @@ public class TypefaceTextView extends TextView {
 
     protected void init(Context context, AttributeSet attrs)
     {
-        preInit(context, attrs);
-
         if (isInEditMode()) return;
 
         final int typefaceValue;
@@ -55,11 +53,6 @@ public class TypefaceTextView extends TextView {
         }
 
         setTypeface(TypefaceManager.getInstance().obtainTypeface(context, typefaceValue));
-    }
-
-    protected void preInit(Context context, AttributeSet attrs)
-    {
-        /** Do Nothing, optional to override */
     }
 
 }
