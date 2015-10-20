@@ -1,11 +1,12 @@
 package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.widget.Button;
 
-public class TypefaceButton extends Button {
-
+public class TypefaceButton extends AppCompatButton
+{
     public TypefaceButton(Context context)
     {
         super(context);

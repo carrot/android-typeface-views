@@ -1,11 +1,12 @@
 package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatRadioButton;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
 
-public class TypefaceRadioButton extends RadioButton {
-
+public class TypefaceRadioButton extends AppCompatRadioButton
+{
     public TypefaceRadioButton(Context context)
     {
         super(context);
