@@ -1,11 +1,12 @@
 package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
+import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
 import android.widget.Switch;
 
-public class TypefaceSwitch extends Switch {
-
+public class TypefaceSwitch extends SwitchCompat
+{
     public TypefaceSwitch(Context context)
     {
         super(context);

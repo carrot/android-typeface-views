@@ -1,11 +1,12 @@
 package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
-public class TypefaceEditText extends EditText {
-
+public class TypefaceEditText extends AppCompatEditText
+{
     public TypefaceEditText(Context context)
     {
         super(context);

@@ -1,11 +1,12 @@
 package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 import android.widget.CheckBox;
 
-public class TypefaceCheckbox extends CheckBox {
-
+public class TypefaceCheckbox extends AppCompatCheckBox
+{
     public TypefaceCheckbox(Context context)
     {
         super(context);

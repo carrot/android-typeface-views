@@ -1,11 +1,12 @@
 package com.carrotcreative.typefaceviews;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public class TypefaceTextView extends TextView {
-
+public class TypefaceTextView extends AppCompatTextView
+{
     public TypefaceTextView(Context context)
     {
         super(context);

@@ -77,7 +77,7 @@ public class TypefaceManager {
         return this;
     }
 
-    Typeface obtainTypeface(Context context, int typefaceValue) throws IllegalArgumentException
+    public Typeface obtainTypeface(Context context, int typefaceValue) throws IllegalArgumentException
     {
         Typeface typeface = mCompiledTypefaces.get(typefaceValue);
         if (typeface == null)
